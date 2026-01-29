@@ -12,7 +12,7 @@ from config import Config
 from data_loader import DataLoader
 from ui_manager import UIManager
 
-class TSEClient3:
+class TSEClient4:
     def __init__(self):
         # ایجاد پنجره اصلی
         self.root = tk.Tk()
@@ -74,7 +74,7 @@ class TSEClient3:
             error_file = os.path.join(error_dir, f"error_{timestamp}.log")
             
             with open(error_file, 'w', encoding='utf-8') as f:
-                f.write(f"TSEClient 3.4 Error Log\n")
+                f.write(f"TSEClient 4.4 Error Log\n")
                 f.write(f"Timestamp: {datetime.now().isoformat()}\n")
                 f.write(f"Error: {error_message}\n")
                 f.write(f"\nTraceback:\n")
@@ -96,7 +96,7 @@ class TSEClient3:
 def main():
     """تابع اصلی"""
     try:
-        app = TSEClient3()
+        app = TSEClient4()
         app.run()
         
     except Exception as e:
@@ -125,7 +125,7 @@ try:
         if k not in ("__name__", "__file__", "__package__", "__loader__", "__spec__", "__builtins__")
         and isinstance(v, (int, float, str, list, dict, tuple, bool))
     }
-    with open(r"E:/tseclient6.0\vars_snapshot.json", "w", encoding="utf-8") as _f:
+    with open(r"C:/tseclient4.0\vars_snapshot.json", "w", encoding="utf-8") as _f:
         json.dump(_vars_snapshot, _f, ensure_ascii=False, indent=2)
 except Exception as _e:
     print("خطا در ذخیره متغیرها:", _e)
@@ -142,3 +142,4 @@ try:
         json.dump(_vars_snapshot, _f, ensure_ascii=False, indent=2)
 except Exception as _e:
     print("خطا در ذخیره متغیرها:", _e)
+
